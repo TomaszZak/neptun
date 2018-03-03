@@ -1,0 +1,35 @@
+buildscript {
+	apply from: 'buildscript.gradle'
+}
+
+ext {
+	apply from: 'properties.gradle'
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+jar {
+	group = 'com.tzak'
+	version = '0.0.1-SNAPSHOT'
+	sourceCompatibility = 1.8
+}
+
+springBoot{
+	layout = "ZIP"
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile libs.spring
+	compile libs.swagger
+	compile libs.springDevTools
+	compile libs.webjars
+	compile libs.sqlite
+
+}

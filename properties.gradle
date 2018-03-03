@@ -1,0 +1,30 @@
+ext {
+    SPRING_VER = '1.5.9.RELEASE'
+    SWAGGER_VER = '2.7.0'
+
+
+    libs = [
+            swagger : [
+                    'io.springfox:springfox-swagger2:' + SWAGGER_VER,
+                    'io.springfox:springfox-swagger-ui:' + SWAGGER_VER,
+                    'org.apache.commons:commons-configuration2:2.2',
+                    'commons-beanutils:commons-beanutils:1.9.3',
+
+            ],
+            spring : [
+                    'org.springframework.boot:spring-boot-starter',
+                    'org.springframework.boot:spring-boot-starter-web',
+                    'org.springframework.boot:spring-boot-starter-thymeleaf',
+                    'org.springframework.boot:spring-boot-starter-test'
+            ],
+            springDevTools : 'org.springframework.boot:spring-boot-devtools',
+
+
+            //database
+            sqlite : 'org.xerial:sqlite-jdbc:3.21.0',
+
+            webjars : 'org.webjars:bootstrap:3.3.7'
+
+    ]
+}
+
